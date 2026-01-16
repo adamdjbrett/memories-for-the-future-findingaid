@@ -1,13 +1,13 @@
 # SEO setup
-title: "PERSEPHONE UNIVERSITY"
-description: "A description here.."
+title: "Memories for the Future"
+description: "A metafinding aid for Indigenous peoples' archives and resources."
 favicon: "/logo.svg"
 image: "/logo.svg"
 language: "en"
 locale: "en_US"
 formspree_id: "https://formspree.io/f/"
-url: "https://research.000000076.xyz" #localhost:8080 or research.000000076.xyz
-#url: http://localhost:8080
+#url: "https://research.000000076.xyz" #localhost:8080 or research.000000076.xyz
+url: http://localhost:8080
 metasocial: 
  - facebook: "https://www.facebook.com/"
  - twitteruser: "@username"
@@ -21,10 +21,10 @@ dark_color: 0F10AF
 # Setup Header Area
 header: 
  logo: /logo.svg
- title1: PERSEPHONE
- title2: UNIVERSITY
+ title1: Memories for the 
+ title2: Future
  title_key: h
- title_subdomain: LIBRARIES
+ title_subdomain: Metafinding Aid
  title_subdomain_key: s
  subdomain_url: https://research.000000076.xyz #optional subdomain for more complex sites
  contact:
@@ -32,15 +32,15 @@ header:
    url: /contact
    key: c
  breadcumb: 
-  - title: Presphone University
+  - title: Memories for the Future
     url: / #can set to a higher level domain 
     key: a
-  - title: Demeter Libraries
+  - title: Metafinding Aid
     url: /
     key: b
  default_breadcumb: Home Page
- sub_title: "An 11ty Library Research Guide Template"
- info: "This 11ty Library Research Guide Template is desigend to be a database free start to creating a long term #minicomp style library and research guide."
+ sub_title: "A metafinding aid for Indigenous peoples' archives and resources related to the UNPFII."
+ info: "Find resources and archives related to Indigenous peoples and the United Nations Permanent Forum on Indigenous Issues (UNPFII). This metafinding aid provides access to a wide range of materials, including documents, statements, and reports from various Indigenous organizations and initiatives."
 
 # Home Sidebar Setup
 homes_sidebar: 
@@ -70,15 +70,71 @@ portfolios_sidebar:
  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
  key: r
 
+# GIPC Sidebar Setup
+gipc_sidebar: 
+ title: "Global Indigenous Peoples Caucus (GIPC)"
+ collections: gipc
+ text: "Global Indigenous Peoples Caucus documents and statements."
+ key: g
+
+# GIWC Sidebar Setup
+giwc_sidebar: 
+ title: "Global Indigenous Women's Caucus (GIWC)"
+ collections: giwc
+ text: "Global Indigenous Women's Caucus documents and statements."
+ key: w
+
+# UNPFII Sidebar Setup
+unpfii_sidebar: 
+ title: "United Nations Permanent Forum on Indigenous Issues (UNPFII)"
+ collections: unpfii
+ text: "United Nations Permanent Forum on Indigenous Issues documents."
+ key: u
+
+# EMRIP Sidebar Setup
+emrip_sidebar: 
+ title: "Expert Mechanism on the Rights of Indigenous Peoples (EMRIP)"
+ collections: emrip
+ text: "Expert Mechanism on the Rights of Indigenous Peoples documents."
+ key: e
+
+# Red Paper Sidebar Setup
+redpaper_sidebar: 
+ title: Red Paper
+ collections: redpaper
+ text: "Instead of 'white paper' documents, the Red Paper presents Indigenous perspectives and responses."
+ key: d
+
+# Doctrine of Discovery Sidebar Setup
+doctrine_sidebar: 
+ title: Doctrine of Discovery
+ collections: doctrine-of-discovery
+ text: "Doctrine of Discovery resources and documents."
+ key: o
+
+# Lyons Sidebar Setup
+lyons_sidebar: 
+ title: Lyons
+ collections: lyons
+ text: "Oren Lyons documents and resources."
+ key: y
+
+# General Sidebar Setup
+general_sidebar: 
+ title: General
+ collections: general
+ text: "General documents and resources."
+ key: n
+
 # Sidebar and RSS Partials Setup 
 sidebar:
  rss:
   title: Links
   item: 
-   - name: Download 11ty Research Guide
-     link: https://github.com/adamdjbrett/11ty-research-guide
-   - name: 11ty Official
-     link: https://11ty.dev
+   - name: American Indian Law Alliance
+     link: https://www.aila.ngo
+   - name: Sacred Places Institute
+     link: https://www.sacredplacesinstitute.org/
    - name: Netlify Hosting
      link: https://netlify.com
    - name: Vercel Hosting
@@ -138,7 +194,7 @@ footer:
           url: /tags/
  creativecommons:
   image: /img/88x31.png
-  text: Except where otherwise noted, this work by Perspheone University and Demeter Libraries is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+  text: Except where otherwise noted, this work by Memories for the Future Collaborative is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
  copyrights: 
   text1: Built with
   text2: 11ty

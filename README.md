@@ -50,3 +50,23 @@ Developer [Adam Dj Brett](https://adamdjbrett.com)
 ## Image Credit
 Image by <a href="https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=156019">OpenClipart-Vectors</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=156019">Pixabay</a>
 
+---
+## CHANGELOG
+### Instructions.
+0. install as you usually do
+```bash
+npm install
+npx @11ty/eleventy --serve --incremental
+```
+1. convert metadata.xlsx to markdown posts
+2. front matter use template demo.md
+3. all metadata.xlsx rows become a page. the columns explain what the format should be
+    1. collection this is the folder the pages should be created in
+    2. slug this should be the filename.md. if it doesnt have one make one.  example yanapaq.md
+        1. slugs cannot be longer than 50 characters and (.md is 3 so 47 characters). 
+        2. no capitals
+        3. numbers only when necessary
+        4. we use ```-``` hypens not underscores. no special characters.
+        5. the rest of the columns are front matter
+4. once collections are populated with data remove demo files and update metadat.yaml to reflect category names etc and make sure the sidebar and homepage look pretty
+### TRACK CHANGES below

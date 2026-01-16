@@ -14,8 +14,31 @@ import yaml from "js-yaml";
 import CleanCSS from "clean-css";
 import { execSync } from 'child_process';
 import pluginFilters from "./_config/filters.js";
+import { DateTime } from "luxon";
+
+// See https://moment.github.io/luxon/#/zones?id=specifying-a-zone
+const TIME_ZONE = "America/New_York";
 
 export default async function(eleventyConfig) {
+	// Date parsing for timezone support
+	eleventyConfig.addDateParsing(function(dateValue) {
+		// Let Eleventy handle special date strings like "Last Modified", "Created", "git Last Modified", etc.
+		if(typeof dateValue === "string" && !dateValue.match(/^\d{4}-\d{2}-\d{2}/)) {
+			return; // Return undefined to let Eleventy use default handling
+		}
+		
+		let localDate;
+		if(dateValue instanceof Date) { // and YAML
+			localDate = DateTime.fromJSDate(dateValue, { zone: "utc" }).setZone(TIME_ZONE, { keepLocalTime: true });
+		} else if(typeof dateValue === "string") {
+			localDate = DateTime.fromISO(dateValue, { zone: TIME_ZONE });
+		}
+		if (localDate?.isValid === false) {
+			throw new Error(`Invalid \`date\` value (${dateValue}) is invalid for ${this.page.inputPath}: ${localDate.invalidReason}`);
+		}
+		return localDate;
+	});
+
 	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
 		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
 			return false;
@@ -74,7 +97,11 @@ export default async function(eleventyConfig) {
 
 
 	  eleventyConfig.on('eleventy.after', () => {
-		execSync(`npx pagefind --site _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
+		try {
+			execSync(`npx pagefind --site _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
+		} catch (error) {
+			console.log('[11ty] Pagefind indexing skipped (not available on this platform)');
+		}
 	  })
 
 	eleventyConfig.addBundle("css", {
