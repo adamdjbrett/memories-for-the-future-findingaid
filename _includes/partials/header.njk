@@ -19,8 +19,16 @@ src="{{metadata.header.logo}}"/></a>
 <div class="container ">
 <nav aria-label="breadcrumb mb-0 ">
 <ol class="breadcrumb">
-{% for b in metadata.header.breadcumb %}<li class="breadcrumb-item"><a class="text-maron" accesskey="{{b.key}}" href="{{b.url}}">{{b.title}}</a></li>{% endfor %}
-<li class="breadcrumb-item active" aria-current="page">{{title or breadcumb or metadata.header.default_breadcumb}}</li>
+  {% for b in metadata.header.breadcumb %}
+    <li class="breadcrumb-item">
+      <a class="text-maron" accesskey="{{b.key}}" href="{{b.url}}">{{b.title}}</a>
+    </li>
+  {% endfor %}
+
+  <li class="breadcrumb-item active" aria-current="page">
+    {% set label = entry.Title or breadcrumb or breadcumb or title or metadata.header.default_breadcumb %}
+    {{ label }}
+  </li>
 </ol>
 </nav>
 <div class="row mts-5">

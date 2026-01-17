@@ -1,44 +1,54 @@
 <div class="accordion" id="accordionLibguide">
 
-{# Home Section #}
-<div class="accordion-item">
-<h3 class="accordion-header">
-<button class="accordion-button collapsed btn-maron" type="button" data-bs-toggle="collapse" accesskey="{{metadata.homes_sidebar.key}}" 
-data-bs-target="#collapse{{metadata.homes_sidebar.key}}" aria-expanded="false" aria-controls="collapse{{metadata.homes_sidebar.key}}"><strong>
-{{metadata.homes_sidebar.title}}
-</strong></button>
-</h3>
-<div id="collapse{{metadata.homes_sidebar.key}}" class="accordion-collapse collapse" data-bs-parent="#accordionLibguide">
-<div class="accordion-body p-1">
-<div class="ms-3">
-{% for si in collections.homepages | reverse %}
-<a class="btn btn-outline-danger col-12  mt-1 mb-1" href="{{metadata.url}}/#{{si.url}}"> {{si.data.title}}</a>{% endfor %}
-</div>
-</div>
-</div>
-</div>
+{% set seenTags = [] %}
 
-{# All Other Collections - Using collectionsData #}
-{% for collectionName, collectionMeta in collectionsData %}
-{% if collections[collectionMeta.collectionTag] and collections[collectionMeta.collectionTag].length > 0 %}
-<div class="accordion-item">
-<h3 class="accordion-header">
-<button class="accordion-button collapsed btn-maron" type="button" data-bs-toggle="collapse" accesskey="{{ collectionMeta.key }}"
-data-bs-target="#collapse{{ collectionName }}" aria-expanded="false" aria-controls="collapse{{ collectionName }}"><strong>
-{{ collectionMeta.title }}
-</strong></button>
-</h3>
-<div id="collapse{{ collectionName }}" class="accordion-collapse collapse" data-bs-parent="#accordionLibguide">
-<div class="accordion-body p-1">
-<div class="ms-3">
-{% for si in collections[collectionMeta.collectionTag] | reverse %}
-<a class="btn btn-outline-danger col-12  mt-1 mb-1" href="{{si.url}}"> {{si.data.title}}</a>
-{% endfor %}
-</div>
-</div>
-</div>
-</div>
-{% endif %}
+{% for name, meta in collectionsData %}
+  {# Standarisasi tag ke HURUF BESAR #}
+  {% set targetTag = (meta.collectionTag or name) | upper %}
+  
+  {% if targetTag not in seenTags %}
+    {% set seenTags = (seenTags.push(targetTag), seenTags) %}
+    {% set uniqueID = "collapse-" + (targetTag | slugify) %}
+
+    <div class="accordion-item">
+      <h3 class="accordion-header">
+        <button class="accordion-button {% if targetTag != (collectionName | upper) %}collapsed{% endif %} btn-maron" 
+                type="button" data-bs-toggle="collapse" data-bs-target="#{{ uniqueID }}">
+          <strong>{{ meta.title | upper }}</strong>
+        </button>
+      </h3>
+
+      <div id="{{ uniqueID }}" class="accordion-collapse collapse {% if targetTag == (collectionName | upper) %}show{% endif %}" 
+           data-bs-parent="#accordionLibguide">
+        <div class="accordion-body p-1">
+          <div class="ms-3">
+            {% for s in collections.all | reverse %}
+              {% if s.data.entry %}
+                {# Match CSV Case-Insensitive menggunakan UPPER #}
+                {% if (s.data.entry.collection | upper) == targetTag %}
+                  <a href="{{ s.url }}" class="btn btn-outline-danger col-12 mt-1 mb-1 {% if s.url == page.url %}actives{% endif %}">
+                    {{ s.data.entry.Title }}
+                  </a>
+                {% endif %}
+              {% else %}
+                {# Match MD Case-Insensitive menggunakan UPPER #}
+                {% set matchMD = false %}
+                {% for tag in s.data.tags %}
+                  {% if tag | upper == targetTag %}{% set matchMD = true %}{% endif %}
+                {% endfor %}
+
+                {% if matchMD %}
+                  <a href="{{ s.url }}" class="btn btn-outline-danger col-12 mt-1 mb-1 {% if s.url == page.url %}actives{% endif %}">
+                    {{ s.data.title }}
+                  </a>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
 {% endfor %}
 
 </div>
