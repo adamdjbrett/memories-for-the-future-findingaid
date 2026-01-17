@@ -2,6 +2,6 @@ export default {
 	tags: [
 		"doctrine-of-discovery"
 	],
-	"layout": "partials/article.njk",
+	"layout": "partials/doctrine-of-discovery/post.njk",
 	"date": "Last Modified",
 };

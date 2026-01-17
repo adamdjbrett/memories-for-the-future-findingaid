@@ -2,6 +2,6 @@ export default {
 	tags: [
 		"giwc"
 	],
-	"layout": "partials/article.njk",
+	"layout": "partials/giwc/post.njk",
 	"date": "Last Modified",
 };

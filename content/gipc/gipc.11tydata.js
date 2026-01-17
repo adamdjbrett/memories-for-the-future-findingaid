@@ -2,6 +2,6 @@ export default {
 	tags: [
 		"gipc"
 	],
-	"layout": "partials/article.njk",
+	"layout": "partials/gipc/post.njk",
 	"date": "Last Modified",
 };

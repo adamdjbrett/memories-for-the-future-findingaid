@@ -2,6 +2,6 @@ export default {
 	tags: [
 		"general"
 	],
-	"layout": "partials/article.njk",
+	"layout": "partials/general/post.njk",
 	"date": "Last Modified",
 };

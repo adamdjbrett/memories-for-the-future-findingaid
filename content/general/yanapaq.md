@@ -1,5 +1,5 @@
 ---
-title: "xYanapaq.info" # 75 characters or less
+title: "Yanapaq" # 75 characters or less
 date: ""
 description: "Browse and track UNPFII recommendations to support Indigenous advocacy, policy proposals, and monitoring across themes and regions." # write an excerpt 150 characters max
 excerpt: # full text of the the description. Each paragraph gets labeled as hypen text colon
