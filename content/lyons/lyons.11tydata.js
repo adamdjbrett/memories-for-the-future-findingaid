@@ -2,6 +2,6 @@ export default {
 	tags: [
 		"lyons"
 	],
-	"layout": "partials/lyons/post.njk",
+	"layout": "collection-post.njk",
 	"date": "Last Modified",
 };

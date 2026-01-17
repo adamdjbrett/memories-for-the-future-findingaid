@@ -18,4 +18,5 @@ author:
     - info: 
 tags: # we are using them for types at the moment more tags added later
  - website
+canonical_url: https://yanapaq.info/
 ---

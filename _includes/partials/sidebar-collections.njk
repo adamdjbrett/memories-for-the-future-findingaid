@@ -1,0 +1,67 @@
+{% set currentCollectionName = collectionName or 'pets' %}
+{% set sidebarData = collectionsData[currentCollectionName] %}
+
+<div class="accordion" id="accordion{{sidebarData.key}}">
+
+{# Home Section #}
+<div class="accordion-item">
+<h3 class="accordion-header">
+<button class="accordion-button collapsed btn-maron" type="button" data-bs-toggle="collapse" accesskey="{{metadata.homes_sidebar.key}}"
+data-bs-target="#collapse{{metadata.homes_sidebar.key}}" aria-expanded="false" aria-controls="collapse{{metadata.homes_sidebar.key}}"><strong>
+{{metadata.homes_sidebar.title}}
+</strong></button>
+</h3>
+<div id="collapse{{metadata.homes_sidebar.key}}" class="accordion-collapse collapse" data-bs-parent="#accordion{{sidebarData.key}}">
+<div class="accordion-body p-1">
+<div class="ms-3">
+{% for si in collections.homepages | reverse %}
+<a class="btn btn-outline-danger col-12  mt-1 mb-1" href="{{si.url}}"> {{si.data.title}}</a>{% endfor %}
+</div>
+</div>
+</div>
+</div>
+
+{# Current Collection Section - Expanded #}
+<div class="accordion-item">
+<h3 class="accordion-header">
+<button class="accordion-button btn-maron" type="button" data-bs-toggle="collapse" accesskey="{{sidebarData.key}}" 
+data-bs-target="#collapse{{sidebarData.key}}" aria-expanded="true" aria-controls="collapse{{sidebarData.key}}"><strong>
+{{sidebarData.title}}
+</strong></button>
+</h3>
+<div id="collapse{{sidebarData.key}}" class="accordion-collapse collapse show" data-bs-parent="#accordion{{sidebarData.key}}">
+<div class="accordion-body p-1">
+<div class="ms-3">
+{% for si in collections[sidebarData.collectionTag] | reverse %}
+{% if si.url == page.url %} <a href="{{si.url}}" class="btn btn-outline-danger col-12  mt-1 mb-1 actives">{% else %}
+ <a href="{{si.url}}" class="btn btn-outline-danger col-12  mt-1 mb-1">{% endif %} {{si.data.title}}</a>{% endfor %}
+</div>
+</div>
+</div>
+</div>
+
+{# Related Collections - Show next 2 #}
+{% set relatedCollections = sidebarData.relatedCollections or [] %}
+{% for relatedName in relatedCollections | slice(0, 2) %}
+{% if relatedName and collections[relatedName] %}
+{% set relatedData = collectionsData[relatedName] %}
+<div class="accordion-item">
+<h3 class="accordion-header">
+<button class="accordion-button collapsed btn-maron" type="button" data-bs-toggle="collapse" accesskey="{{relatedData.key}}"
+data-bs-target="#collapse{{relatedData.key}}" aria-expanded="false" aria-controls="collapse{{relatedData.key}}"><strong>
+{{relatedData.title}}
+</strong></button>
+</h3>
+<div id="collapse{{relatedData.key}}" class="accordion-collapse collapse" data-bs-parent="#accordion{{sidebarData.key}}">
+<div class="accordion-body p-1">
+<div class="ms-3">
+{% for si in collections[relatedData.collectionTag] | reverse %}
+<a class="btn btn-outline-danger col-12  mt-1 mb-1" href="{{si.url}}"> {{si.data.title}}</a>{% endfor %}
+</div>
+</div>
+</div>
+</div>
+{% endif %}
+{% endfor %}
+
+</div>

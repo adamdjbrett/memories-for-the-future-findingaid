@@ -1,0 +1,18 @@
+---
+layout: base.njk
+permalink: /debug-collections.html
+eleventyExcludeFromCollections: true
+---
+
+<h1>Debug Collections</h1>
+
+<h2>Doctrine of Discovery Collection</h2>
+<p>Collection exists: {% if collections['doctrine-of-discovery'] %}YES{% else %}NO{% endif %}</p>
+<p>Count: {{ collections['doctrine-of-discovery'] | length }}</p>
+
+<ul>
+{% for item in collections['doctrine-of-discovery'] %}
+  <li>{{ item.data.title }} - {{ item.url }}</li>
+{% endfor %}
+</ul>
+

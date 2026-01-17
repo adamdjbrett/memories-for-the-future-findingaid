@@ -1,13 +1,14 @@
 <div class="accordion" id="accordionLibguide">
 
+{# Home Section - Expanded #}
 <div class="accordion-item">
 <h3 class="accordion-header">
 <button class="accordion-button show btn-maron" type="button" data-bs-toggle="collapse" accesskey="{{metadata.homes_sidebar.key}}" 
-data-bs-target="#collapse{{metadata.homes_sidebar.key}}" aria-expanded="false" aria-controls="collapse{{metadata.homes_sidebar.key}}"><strong>
+data-bs-target="#collapse{{metadata.homes_sidebar.key}}" aria-expanded="true" aria-controls="collapse{{metadata.homes_sidebar.key}}"><strong>
 {{metadata.homes_sidebar.title}}
 </strong></button>
 </h3>
-<div id="collapse{{metadata.homes_sidebar.key}}" class="accordion-collapse collapse show" data-bs-parent="#accordion{{metadata.homes_sidebar.key}}">
+<div id="collapse{{metadata.homes_sidebar.key}}" class="accordion-collapse collapse show" data-bs-parent="#accordionLibguide">
 <div class="accordion-body p-1">
 <div class="ms-3">
 {% for si in collections.homepages | reverse %}
@@ -17,191 +18,27 @@ data-bs-target="#collapse{{metadata.homes_sidebar.key}}" aria-expanded="false" a
 </div>
 </div>
 
+{# All Other Collections - Using collectionsData #}
+{% for collectionName, collectionMeta in collectionsData %}
+{% if collections[collectionMeta.collectionTag] and collections[collectionMeta.collectionTag].length > 0 %}
 <div class="accordion-item">
 <h3 class="accordion-header">
-<button class="accordion-button collapsed btn-maron" type="button" data-bs-toggle="collapse" accesskey="{{metadata.pets_sidebar.key}}" 
-data-bs-target="#collapse{{metadata.pets_sidebar.key}}" aria-expanded="false" aria-controls="collapse{{metadata.pets_sidebar.key}}"><strong>
-{{metadata.pets_sidebar.title}}
+<button class="accordion-button collapsed btn-maron" type="button" data-bs-toggle="collapse" accesskey="{{ collectionMeta.key }}"
+data-bs-target="#collapse{{ collectionName }}" aria-expanded="false" aria-controls="collapse{{ collectionName }}"><strong>
+{{ collectionMeta.title }}
 </strong></button>
 </h3>
-<div id="collapse{{metadata.pets_sidebar.key}}" class="accordion-collapse collapse" data-bs-parent="#accordion{{metadata.pets_sidebar.key}}">
+<div id="collapse{{ collectionName }}" class="accordion-collapse collapse" data-bs-parent="#accordionLibguide">
 <div class="accordion-body p-1">
 <div class="ms-3">
-{% for si in collections.pets | reverse %}
-<a class="btn btn-outline-danger col-12  mt-1 mb-1" href="{{metadata.url}}/{{metadata.pets_sidebar.collections}}#{{si.url}}"> {{si.data.title}}</a>{% endfor %}
+{% for si in collections[collectionMeta.collectionTag] | reverse %}
+<a class="btn btn-outline-danger col-12  mt-1 mb-1" href="{{si.url}}"> {{si.data.title}}</a>
+{% endfor %}
 </div>
 </div>
 </div>
 </div>
-
-<div class="accordion-item">
-<h3 class="accordion-header">
-<button class="accordion-button collapsed btn-maron" type="button" data-bs-toggle="collapse" accesskey="{{metadata.recipes_sidebar.key}}"
-data-bs-target="#collapse{{metadata.recipes_sidebar.key}}" aria-expanded="false" aria-controls="collapse{{metadata.recipes_sidebar.key}}"><strong>
-{{metadata.recipes_sidebar.title}}
-</strong></button>
-</h3>
-<div id="collapse{{metadata.recipes_sidebar.key}}" class="accordion-collapse collapse" data-bs-parent="#accordion{{metadata.recipes_sidebar.key}}">
-<div class="accordion-body p-1">
-<div class="ms-3">
-{% for si in collections.recipes | reverse %}
-<a class="btn btn-outline-danger col-12  mt-1 mb-1" href="{{metadata.url}}/{{metadata.recipes_sidebar.collections}}#{{si.url}}"> {{si.data.title}}</a>{% endfor %}
-</div>
-</div>
-</div>
-</div>
-
-<div class="accordion-item">
-<h3 class="accordion-header">
-<button class="accordion-button collapsed btn-maron" type="button" accesskey="{{metadata.portfolios_sidebar.key}}"
-data-bs-toggle="collapse" data-bs-target="#collapse{{metadata.portfolios_sidebar.key}}" aria-expanded="false" aria-controls="collapse{{metadata.portfolios_sidebar.key}}"><strong>
-{{metadata.portfolios_sidebar.title}}
-</strong></button>
-</h3>
-<div id="collapse{{metadata.portfolios_sidebar.key}}" class="accordion-collapse collapse" data-bs-parent="#accordion{{metadata.portfolios_sidebar.key}}">
-<div class="accordion-body p-1">
-<div class="ms-3">
-{% for si in collections.portfolios | reverse %}
-<a class="btn btn-outline-danger col-12  mt-1 mb-1" href="{{metadata.url}}/{{metadata.portfolios_sidebar.collections}}#{{si.url}}"> {{si.data.title}}</a>{% endfor %}
-</div>
-</div>
-</div>
-</div>
-
-<div class="accordion-item">
-<h3 class="accordion-header">
-<button class="accordion-button collapsed btn-maron" type="button" accesskey="{{metadata.gipc_sidebar.key}}"
-data-bs-toggle="collapse" data-bs-target="#collapse{{metadata.gipc_sidebar.key}}" aria-expanded="false" aria-controls="collapse{{metadata.gipc_sidebar.key}}"><strong>
-{{metadata.gipc_sidebar.title}}
-</strong></button>
-</h3>
-<div id="collapse{{metadata.gipc_sidebar.key}}" class="accordion-collapse collapse" data-bs-parent="#accordion{{metadata.gipc_sidebar.key}}">
-<div class="accordion-body p-1">
-<div class="ms-3">
-{% for si in collections.gipc | reverse %}
-<a class="btn btn-outline-danger col-12  mt-1 mb-1" href="{{metadata.url}}/{{metadata.gipc_sidebar.collections}}#{{si.url}}"> {{si.data.title}}</a>{% endfor %}
-</div>
-</div>
-</div>
-</div>
-
-<div class="accordion-item">
-<h3 class="accordion-header">
-<button class="accordion-button collapsed btn-maron" type="button" accesskey="{{metadata.giwc_sidebar.key}}"
-data-bs-toggle="collapse" data-bs-target="#collapse{{metadata.giwc_sidebar.key}}" aria-expanded="false" aria-controls="collapse{{metadata.giwc_sidebar.key}}"><strong>
-{{metadata.giwc_sidebar.title}}
-</strong></button>
-</h3>
-<div id="collapse{{metadata.giwc_sidebar.key}}" class="accordion-collapse collapse" data-bs-parent="#accordion{{metadata.giwc_sidebar.key}}">
-<div class="accordion-body p-1">
-<div class="ms-3">
-{% for si in collections.giwc | reverse %}
-<a class="btn btn-outline-danger col-12  mt-1 mb-1" href="{{metadata.url}}/{{metadata.giwc_sidebar.collections}}#{{si.url}}"> {{si.data.title}}</a>{% endfor %}
-</div>
-</div>
-</div>
-</div>
-
-<div class="accordion-item">
-<h3 class="accordion-header">
-<button class="accordion-button collapsed btn-maron" type="button" accesskey="{{metadata.unpfii_sidebar.key}}"
-data-bs-toggle="collapse" data-bs-target="#collapse{{metadata.unpfii_sidebar.key}}" aria-expanded="false" aria-controls="collapse{{metadata.unpfii_sidebar.key}}"><strong>
-{{metadata.unpfii_sidebar.title}}
-</strong></button>
-</h3>
-<div id="collapse{{metadata.unpfii_sidebar.key}}" class="accordion-collapse collapse" data-bs-parent="#accordion{{metadata.unpfii_sidebar.key}}">
-<div class="accordion-body p-1">
-<div class="ms-3">
-{% for si in collections.unpfii | reverse %}
-<a class="btn btn-outline-danger col-12  mt-1 mb-1" href="{{metadata.url}}/{{metadata.unpfii_sidebar.collections}}#{{si.url}}"> {{si.data.title}}</a>{% endfor %}
-</div>
-</div>
-</div>
-</div>
-
-<div class="accordion-item">
-<h3 class="accordion-header">
-<button class="accordion-button collapsed btn-maron" type="button" accesskey="{{metadata.emrip_sidebar.key}}"
-data-bs-toggle="collapse" data-bs-target="#collapse{{metadata.emrip_sidebar.key}}" aria-expanded="false" aria-controls="collapse{{metadata.emrip_sidebar.key}}"><strong>
-{{metadata.emrip_sidebar.title}}
-</strong></button>
-</h3>
-<div id="collapse{{metadata.emrip_sidebar.key}}" class="accordion-collapse collapse" data-bs-parent="#accordion{{metadata.emrip_sidebar.key}}">
-<div class="accordion-body p-1">
-<div class="ms-3">
-{% for si in collections.emrip | reverse %}
-<a class="btn btn-outline-danger col-12  mt-1 mb-1" href="{{metadata.url}}/{{metadata.emrip_sidebar.collections}}#{{si.url}}"> {{si.data.title}}</a>{% endfor %}
-</div>
-</div>
-</div>
-</div>
-
-<div class="accordion-item">
-<h3 class="accordion-header">
-<button class="accordion-button collapsed btn-maron" type="button" accesskey="{{metadata.redpaper_sidebar.key}}"
-data-bs-toggle="collapse" data-bs-target="#collapse{{metadata.redpaper_sidebar.key}}" aria-expanded="false" aria-controls="collapse{{metadata.redpaper_sidebar.key}}"><strong>
-{{metadata.redpaper_sidebar.title}}
-</strong></button>
-</h3>
-<div id="collapse{{metadata.redpaper_sidebar.key}}" class="accordion-collapse collapse" data-bs-parent="#accordion{{metadata.redpaper_sidebar.key}}">
-<div class="accordion-body p-1">
-<div class="ms-3">
-{% for si in collections.redpaper | reverse %}
-<a class="btn btn-outline-danger col-12  mt-1 mb-1" href="{{metadata.url}}/{{metadata.redpaper_sidebar.collections}}#{{si.url}}"> {{si.data.title}}</a>{% endfor %}
-</div>
-</div>
-</div>
-</div>
-
-<div class="accordion-item">
-<h3 class="accordion-header">
-<button class="accordion-button collapsed btn-maron" type="button" accesskey="{{metadata.doctrine_sidebar.key}}"
-data-bs-toggle="collapse" data-bs-target="#collapse{{metadata.doctrine_sidebar.key}}" aria-expanded="false" aria-controls="collapse{{metadata.doctrine_sidebar.key}}"><strong>
-{{metadata.doctrine_sidebar.title}}
-</strong></button>
-</h3>
-<div id="collapse{{metadata.doctrine_sidebar.key}}" class="accordion-collapse collapse" data-bs-parent="#accordion{{metadata.doctrine_sidebar.key}}">
-<div class="accordion-body p-1">
-<div class="ms-3">
-{% for si in collections["doctrine-of-discovery"] | reverse %}
-<a class="btn btn-outline-danger col-12  mt-1 mb-1" href="{{metadata.url}}/{{metadata.doctrine_sidebar.collections}}#{{si.url}}"> {{si.data.title}}</a>{% endfor %}
-</div>
-</div>
-</div>
-</div>
-
-<div class="accordion-item">
-<h3 class="accordion-header">
-<button class="accordion-button collapsed btn-maron" type="button" accesskey="{{metadata.lyons_sidebar.key}}"
-data-bs-toggle="collapse" data-bs-target="#collapse{{metadata.lyons_sidebar.key}}" aria-expanded="false" aria-controls="collapse{{metadata.lyons_sidebar.key}}"><strong>
-{{metadata.lyons_sidebar.title}}
-</strong></button>
-</h3>
-<div id="collapse{{metadata.lyons_sidebar.key}}" class="accordion-collapse collapse" data-bs-parent="#accordion{{metadata.lyons_sidebar.key}}">
-<div class="accordion-body p-1">
-<div class="ms-3">
-{% for si in collections.lyons | reverse %}
-<a class="btn btn-outline-danger col-12  mt-1 mb-1" href="{{metadata.url}}/{{metadata.lyons_sidebar.collections}}#{{si.url}}"> {{si.data.title}}</a>{% endfor %}
-</div>
-</div>
-</div>
-</div>
-
-<div class="accordion-item">
-<h3 class="accordion-header">
-<button class="accordion-button collapsed btn-maron" type="button" accesskey="{{metadata.general_sidebar.key}}"
-data-bs-toggle="collapse" data-bs-target="#collapse{{metadata.general_sidebar.key}}" aria-expanded="false" aria-controls="collapse{{metadata.general_sidebar.key}}"><strong>
-{{metadata.general_sidebar.title}}
-</strong></button>
-</h3>
-<div id="collapse{{metadata.general_sidebar.key}}" class="accordion-collapse collapse" data-bs-parent="#accordion{{metadata.general_sidebar.key}}">
-<div class="accordion-body p-1">
-<div class="ms-3">
-{% for si in collections.general | reverse %}
-<a class="btn btn-outline-danger col-12  mt-1 mb-1" href="{{metadata.url}}/{{metadata.general_sidebar.collections}}#{{si.url}}"> {{si.data.title}}</a>{% endfor %}
-</div>
-</div>
-</div>
-</div>
+{% endif %}
+{% endfor %}
 
 </div>

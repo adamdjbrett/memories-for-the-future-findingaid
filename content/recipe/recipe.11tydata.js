@@ -2,6 +2,6 @@ export default {
 	tags: [
 		"recipes"
 	],
-	"layout": "partials/recipes/post.njk",
+	"layout": "collection-post.njk",
     "date": "Last Modified",
 };

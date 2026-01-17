@@ -2,6 +2,6 @@ export default {
 	tags: [
 		"emrip"
 	],
-	"layout": "partials/emrip/post.njk",
+	"layout": "collection-post.njk",
 	"date": "Last Modified",
 };

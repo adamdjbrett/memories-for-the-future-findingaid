@@ -2,6 +2,6 @@ export default {
 	tags: [
 		"redpaper"
 	],
-	"layout": "partials/redpaper/post.njk",
+	"layout": "collection-post.njk",
 	"date": "Last Modified",
 };

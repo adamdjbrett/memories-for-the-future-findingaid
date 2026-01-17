@@ -2,6 +2,6 @@ export default {
 	tags: [
 		"pets"
 	],
-	"layout": "partials/pets/post.njk",
+	"layout": "collection-post.njk",
     "date": "Last Modified",
 };

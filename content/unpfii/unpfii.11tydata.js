@@ -2,6 +2,6 @@ export default {
 	tags: [
 		"unpfii"
 	],
-	"layout": "partials/unpfii/post.njk",
+	"layout": "collection-post.njk",
 	"date": "Last Modified",
 };
