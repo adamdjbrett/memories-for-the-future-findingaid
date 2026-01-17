@@ -1,42 +1,34 @@
 import { DateTime } from "luxon";
 
 export default function(eleventyConfig) {
-	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
-		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "dd LLLL yyyy");
+	eleventyConfig.addFilter("readableDate", (dateObj, format) => {
+		if (!dateObj) return "";
+		const date = dateObj instanceof Date ? dateObj : new Date(dateObj);
+		return DateTime.fromJSDate(date, { zone: "utc" }).toFormat(format || "dd LLLL yyyy");
 	});
 
+	// Filter ini yang dicari oleh sitemap.xml.njk
 	eleventyConfig.addFilter("htmlDateString", (dateObj) => {
-		return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat('yyyy-LL-dd');
+		if (!dateObj) return "";
+		const date = dateObj instanceof Date ? dateObj : new Date(dateObj);
+		return DateTime.fromJSDate(date, { zone: "utc" }).toFormat('yyyy-LL-dd');
 	});
-  
-		eleventyConfig.addNunjucksFilter("limit", (arr, limit) => arr.slice(0, limit));
-		
-		eleventyConfig.addFilter("min", (...numbers) => {
-			return Math.min.apply(null, numbers);
-		});
 
 	eleventyConfig.addFilter("head", (array, n) => {
-		if(!Array.isArray(array) || array.length === 0) {
-			return [];
-		}
-		if( n < 0 ) {
-			return array.slice(n);
-		}
-
-		return array.slice(0, n);
+		if(!Array.isArray(array)) return [];
+		return (n < 0) ? array.slice(n) : array.slice(0, n);
 	});
 
-	eleventyConfig.addFilter("min", (...numbers) => {
-		return Math.min.apply(null, numbers);
+	eleventyConfig.addFilter("filterTagList", function(tags) {
+		if(!Array.isArray(tags)) return [];
+		return tags.filter(tag => {
+			const excluded = ["all", "recipes", "pets", "portfolios", "homepages", "general",
+			"testting", "pages", "author", "authors"];
+			return typeof tag === 'string' && excluded.indexOf(tag) === -1;
+		});
 	});
-
 
 	eleventyConfig.addFilter("getKeys", target => {
-		return Object.keys(target);
+		return target ? Object.keys(target) : [];
 	});
-
-	eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
-		return (tags || []).filter(tag => ["all", "recipes", "pets", "portfolios" , "homepages" , "pages","author" , "authors"].indexOf(tag) === -1);
-	});
-
 };

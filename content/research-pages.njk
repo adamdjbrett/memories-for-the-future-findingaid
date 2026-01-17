@@ -1,0 +1,32 @@
+---
+pagination:
+  data: research_data
+  size: 1
+  alias: entry
+  addAllPagesToCollections: true
+permalink: "/{{ (entry.collection or 'general') | slugify }}/{{ (entry.slug or entry.Title or 'research') | slugify }}-{{ pagination.pageNumber }}/index.html"
+layout: collection-post.njk
+eleventyComputed:
+  title: "{{ entry.Title }}"
+  description: "{{ entry.Description }}"
+  tags: ["{{ entry.collection }}"]
+---
+<article>
+  <header class="mb-4">
+    <h1>{{ entry.Title }}</h1>
+    <p class="text-muted">
+      {% if entry.Author %}<strong>Author:</strong> {{ entry.Author }}{% endif %}
+      {% if entry.Date %} | <strong>Date:</strong> {{ entry.Date }}{% endif %}
+    </p>
+  </header>
+
+  <div class="content">
+    {{ entry.Description | safe }}
+  </div>
+
+  {% if entry.URL %}
+    <div class="mt-4">
+      <a href="{{ entry.URL }}" class="btn btn-outline-primary" target="_blank">Visit Resource</a>
+    </div>
+  {% endif %}
+</article>
