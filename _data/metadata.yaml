@@ -1,13 +1,13 @@
 # SEO setup
 title: "Memories for the Future"
-description: "A metafinding aid for Indigenous peoples' archives and resources."
+description: "A metafinding aid and guide for Indigenous peoples' archives and resources."
 favicon: "/logo.svg"
 image: "/logo.svg"
 language: "en"
 locale: "en_US"
 formspree_id: "https://formspree.io/f/"
-#url: "https://research.000000076.xyz" #localhost:8080 or research.000000076.xyz
-url: http://localhost:8080
+url: "https://guide.memoriesforthefuture.org" #localhost:8080 or research.000000076.xyz
+#url: http://localhost:8080
 metasocial: 
  - facebook: "https://www.facebook.com/"
  - twitteruser: "@username"
@@ -24,9 +24,9 @@ header:
  title1: Memories for the 
  title2: Future
  title_key: h
- title_subdomain: Metafinding Aid
+ title_subdomain: Guide
  title_subdomain_key: s
- subdomain_url: https://research.000000076.xyz #optional subdomain for more complex sites
+ #subdomain_url: https://research.000000076.xyz #optional subdomain for more complex sites
  contact:
    button: Contact Us
    url: /contact
