@@ -11,6 +11,11 @@ const collectionTagMap = {
     'pet': 'pets', 'recipe': 'recipes', 'portfolio': 'portfolios', 'home': 'homepages'
 };
 
+// Optional overrides for sidebar display titles
+const displayNameMap = {
+    lyons: "Faithkeeper Oren Lyons",
+};
+
 function normalizeName(name) {
     return name.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 }
@@ -46,8 +51,10 @@ export default function() {
         const key = generateAccessKey(collectionName, index);
         const collectionTag = collectionTagMap[collectionName] || collectionName;
         
+        const title = displayNameMap[collectionName] || normalizeName(collectionName);
+
         collectionsMeta[collectionName] = {
-            title: normalizeName(collectionName),
+            title: title,
             collections: collectionName,
             collectionTag: collectionTag, // Ini harus match dengan tag di research-pages.njk
             text: `Documents and resources related to ${normalizeName(collectionName)}.`,
