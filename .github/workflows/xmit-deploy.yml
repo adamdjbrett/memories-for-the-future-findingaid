@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # Target site/domain for XMIT deploy
-      XMIT_SITE: guide.memoriesforthefuture.org@389 
+      XMIT_SITE: guide.memoriesforthefuture.org@389
     steps:
       - name: Checkout
         uses: actions/checkout@v4
