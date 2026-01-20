@@ -1,48 +1,41 @@
 ---
 title: "About This Project"
-description: "A chocolate chip cookie is a drop cookie that originated in the United States and features chocolate chips as its distinguishing ingredient."
+description: "Learn about the Memories for the Future Finding Aid, a comprehensive digital guide to the American Indian Law Alliance archives and research resources."
 excerpt: 
- - text: ABout this projects, A chocolate chip cookie is a drop cookie that originated in the United States and features chocolate chips as its distinguishing ingredient.The traditional recipe combines a dough composed of butter and both brown and white sugar with semi-sweet chocolate chips. Variations include recipes with other types of chocolate as well as additional ingredients such as nuts or oatmeal.
+ - text: The Memories for the Future Finding Aid is a digital guide designed to help researchers, educators, students, and community members navigate the American Indian Law Alliance archives. This resource provides detailed descriptions of archival collections, research materials, and historical documentation related to Indigenous rights, sovereignty, and international advocacy work.
 date: 2025-01-02
 author: 
- - name: Alfonso Perez
-   image: "/img/authors/alfonso.png"
-   email: "mymail@mail.com"
+ - name: American Indian Law Alliance Archive Team
+   image: /img/authors/aila.png
+   email: archive@aila.ngo
    about: 
-    - info: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-    - info: Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    - info: Stewarding the American Indian Law Alliance archives and research resources.
    contact: 
-    - info: Bolgana 157-224 , Ramez Elvuso
-    - info: 125-66-78
+    - info: "305 Vine Street, Suite #3"
+    - info: "Liverpool, NY 13088"
 tags: 
  - about
- - about libguide 11ty
+ - finding aid
+ - archive
+ - digital guide
 ---
 
-A chocolate chip cookie is a drop cookie that originated in the United States and features chocolate chips as its distinguishing ingredient.
+## Project Overview
 
-The traditional recipe combines a dough composed of butter and both brown and white sugar with semi-sweet chocolate chips. Variations include recipes with other types of chocolate as well as additional ingredients such as nuts or oatmeal.
+The Memories for the Future Finding Aid is a comprehensive digital resource that provides access to and context for the American Indian Law Alliance (AILA) archives. This project emerged from the need to preserve, organize, and share decades of invaluable documentation related to Indigenous peoples' advocacy at the United Nations, grassroots organizing, and the fight for Native rights and sovereignty. By creating this finding aid, we aim to make these critical historical materials accessible to researchers, community members, educators, and activists who continue the work of advancing Indigenous rights and self-determination.
 
-This recipe makes 4 dozen cookies.
+## Purpose and Goals
 
-## Ingredients
+This finding aid serves multiple purposes within the broader archival mission. It provides detailed descriptions of collection materials, including correspondence, reports, photographs, audio-visual materials, and organizational records that document AILA's work from its founding to the present day. The guide helps users understand the scope and content of available materials, locate specific documents or topics of interest, and contextualize these resources within the larger historical narrative of Indigenous rights movements. Our goal is to ensure that these memories of the past inform and inspire future generations of advocates, scholars, and community leaders.
 
-* 2 1/4 cups all-purpose flour
-* 1 teaspoon baking soda
-* 1/2 teaspoon salt
-* 1 cup butter, softened and cut to pieces
-* 1 cup sugar
-* 1 cup light brown sugar, packed
-* 2 teaspoons vanilla extract
-* 2 large eggs
-* 2 cups semi-sweet chocolate chips
-* 1/2 teaspoon nutmeg (optional)
-* 1 cup chopped pecans or walnuts (optional)
+## Who This Guide Serves
 
-## Directions
+We designed this finding aid with diverse audiences in mind. Researchers and scholars will find detailed archival descriptions and metadata to support academic inquiry into Indigenous rights history, international law, and social movements. Educators can use this resource to develop curricula and teaching materials that center Indigenous perspectives and histories. Community members and tribal nations can access documentation of their own advocacy and organizing efforts. Activists and advocates will discover historical precedents and strategies that inform contemporary struggles for sovereignty and justice. The guide is structured to be accessible to both archival experts and those new to working with primary source materials.
 
-1. Preheat the oven to 350 F.
-2. In a medium bowl, whisk flour with baking soda, nutmeg and salt.
-3. In a large bowl, beat butter with sugar and brown sugar until creamy and light. Add vanilla and eggs, one at a time, and mix until incorporated.
-4. Gradually add dry mixture into the butter-sugar wet blend, mixing with a spatula until combined. Add chocolate chips and nuts until just mixed.
-5. Drop tablespoon-sized clumps onto un-greased cookie sheets. Bake for 8-12 minutes, or until pale brown. Allow to cool on the pan for a minute or three, then transfer cookies to a wire rack to finish cooling.
+## Methodology and Development
+
+The development of this finding aid involved extensive collaboration between archivists, community members, and the AILA team. We employed archival standards and best practices while remaining responsive to Indigenous protocols for handling sensitive materials and cultural knowledge. The project included surveying and appraising collection materials, creating detailed descriptive metadata, digitizing key documents and media, and building a user-friendly digital interface. Throughout this process, we prioritized community input and ensured that the organization and description of materials reflected Indigenous perspectives and priorities rather than imposing external categorizations.
+
+## Future Directions
+
+This finding aid represents a living resource that will continue to grow and evolve. As we process additional archival materials, digitize more content, and incorporate community feedback, the guide will expand to encompass new collections and enhanced access points. We are committed to ongoing improvements in accessibility, including adding more multilingual descriptions, enhancing search functionality, and developing educational resources that accompany the archival materials. We invite users to share their experiences, suggest improvements, and help us build a resource that truly serves the needs of those working toward Indigenous justice and sovereignty.

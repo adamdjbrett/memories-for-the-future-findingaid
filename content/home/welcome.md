@@ -1,51 +1,29 @@
 ---
 title: "Welcome"
-description: "A Welcome description"
+description: "Discover resources and research pathways supporting indigenous rights, sovereignty, and community wellbeing."
 excerpt:
- - text:  Welcome to libguide project, this is a open source code to help who need build and develop libguide site with low cost.
+ - text: "Explore how the American Indian Law Alliance and partners are archiving knowledge, sharing research, and empowering communities for the future."
 date: 2025-01-03
 author: 
- - name: Alfonso Perez
-   image: "/img/authors/alfonso.png"
-   email: "mymail@mail.com"
+ - name: Adam DJ Brett
+   image: "/img/authors/adamdjbrett.jpg"
+   email: "abrett@aila.ngo"
+   affiliation: "American Indian Law Alliance"
+   website: "https://www.aila.ngo"
    about: 
-    - info: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-    - info: Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    - info: Internatioanl Research Associate and Operations Manager, working for the American Indian Law Alliance (AILA) to advance indigenous rights and sovereignty
    contact: 
-    - info: Bolgana 157-224 , Ramez Elvuso
-    - info: 125-66-78
+    - info: "305 Vine Street, Suite #3"
+    - info: "Liverpool, NY 13088"
 tags:
  - welcome
- - welcome home
+ - home
 ---
-## Theme Download 
-[Github repo](https://github.com/adamdjbrett/11ty-research-guide)
+## Centering Indigenous Sovereignty
+The American Indian Law Alliance (AILA) partners with Indigenous nations and communities to advance sovereignty, protect treaties, and uphold human rights. This site curates research, legal resources, and educational materials so advocates can quickly find and share what they need.
 
-## A Chocolate Chip Cookie
-A chocolate chip cookie is a drop cookie that originated in the United States and features chocolate chips as its distinguishing ingredient.
+## Building Research Pathways
+Here you'll find guidance on documenting community knowledge, organizing archives, and leveraging digital tools to preserve stories for future generations. We spotlight collaborations, case studies, and open-source resources that lower barriers to building and maintaining research collections.
 
-The traditional recipe combines a dough composed of butter and both brown and white sugar with semi-sweet chocolate chips. Variations include recipes with other types of chocolate as well as additional ingredients such as nuts or oatmeal.
-
-This recipe makes 4 dozen cookies.
-
-## Ingredients
-
-* 2 1/4 cups all-purpose flour
-* 1 teaspoon baking soda
-* 1/2 teaspoon salt
-* 1 cup butter, softened and cut to pieces
-* 1 cup sugar
-* 1 cup light brown sugar, packed
-* 2 teaspoons vanilla extract
-* 2 large eggs
-* 2 cups semi-sweet chocolate chips
-* 1/2 teaspoon nutmeg (optional)
-* 1 cup chopped pecans or walnuts (optional)
-
-## Directions
-
-1. Preheat the oven to 350 F.
-2. In a medium bowl, whisk flour with baking soda, nutmeg and salt.
-3. In a large bowl, beat butter with sugar and brown sugar until creamy and light. Add vanilla and eggs, one at a time, and mix until incorporated.
-4. Gradually add dry mixture into the butter-sugar wet blend, mixing with a spatula until combined. Add chocolate chips and nuts until just mixed.
-5. Drop tablespoon-sized clumps onto un-greased cookie sheets. Bake for 8-12 minutes, or until pale brown. Allow to cool on the pan for a minute or three, then transfer cookies to a wire rack to finish cooling.
+## How to Get Involved
+Whether you're beginning a new project or expanding an existing archive, explore the collections, contribute materials, or reach out to the AILA team. Together we can strengthen networks of support, keep knowledge accessible, and ensure these narratives remain visible and actionable.

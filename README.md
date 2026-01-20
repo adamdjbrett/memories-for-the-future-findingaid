@@ -52,6 +52,11 @@ Image by <a href="https://pixabay.com/users/openclipart-vectors-30363/?utm_sourc
 
 ---
 ## CHANGELOG
+### Updates needed as of Jan 19
+1. metadata.yaml rows 45-50 not working
+2. enable sidebar sort key for example home should be first followed by general, then alphabetical
+3. 
+
 ### Instructions.
 0. install as you usually do
 ```bash

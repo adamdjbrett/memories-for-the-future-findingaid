@@ -1,6 +1,6 @@
 ---
 layout: "home.njk"
-title: Home Pages
+title: Home Page
 description: this is descriptions
 breadcumb: Home Page
 date: Last Modified

@@ -1,48 +1,24 @@
 ---
 title: "Thank You"
-description: "A chocolate chip cookie is a drop cookie that originated in the United States and features chocolate chips as its distinguishing ingredient."
+description: "Expressing our deep gratitude to the partners, collaborators, and supporters who have made the Memories for the Future archive possible."
 excerpt: 
- - text: ABout this projects, A chocolate chip cookie is a drop cookie that originated in the United States and features chocolate chips as its distinguishing ingredient.The traditional recipe combines a dough composed of butter and both brown and white sugar with semi-sweet chocolate chips. Variations include recipes with other types of chocolate as well as additional ingredients such as nuts or oatmeal.
+ - text: The Memories for the Future archive represents a collaborative effort to preserve and share vital historical documentation. We extend our heartfelt gratitude to all our partners, community members, collaborators, and supporters whose dedication, expertise, and generosity have made this project possible. Your commitment to preserving Indigenous knowledge and histories ensures that these memories will continue to inform and inspire future generations.
 date: 2025-01-01
 author: 
- - name: Maria Veronica
-   image: /img/authors/maria.png
-   email: mail@mail.com
+ - name: American Indian Law Alliance Archive Team
+   image: /img/authors/aila.png
+   email: archive@aila.ngo
    about: 
-    - info: Lorep ipsum dolor siamet amet jabang bayi lanang wedok.
-    - info: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    - info: Stewarding the American Indian Law Alliance archives and research resources.
    contact: 
-    - info: Sesame Street , Longhingtown 123
-    - info: 6132-566-778
+    - info: "305 Vine Street, Suite #3"
+    - info: "Liverpool, NY 13088"
 tags: 
  - thanks
  - thank you
+ - gratitude
+ - partners
+ - archive
 ---
 
-A chocolate chip cookie is a drop cookie that originated in the United States and features chocolate chips as its distinguishing ingredient.
-
-The traditional recipe combines a dough composed of butter and both brown and white sugar with semi-sweet chocolate chips. Variations include recipes with other types of chocolate as well as additional ingredients such as nuts or oatmeal.
-
-This recipe makes 4 dozen cookies.
-
-## Ingredients
-
-* 2 1/4 cups all-purpose flour
-* 1 teaspoon baking soda
-* 1/2 teaspoon salt
-* 1 cup butter, softened and cut to pieces
-* 1 cup sugar
-* 1 cup light brown sugar, packed
-* 2 teaspoons vanilla extract
-* 2 large eggs
-* 2 cups semi-sweet chocolate chips
-* 1/2 teaspoon nutmeg (optional)
-* 1 cup chopped pecans or walnuts (optional)
-
-## Directions
-
-1. Preheat the oven to 350 F.
-2. In a medium bowl, whisk flour with baking soda, nutmeg and salt.
-3. In a large bowl, beat butter with sugar and brown sugar until creamy and light. Add vanilla and eggs, one at a time, and mix until incorporated.
-4. Gradually add dry mixture into the butter-sugar wet blend, mixing with a spatula until combined. Add chocolate chips and nuts until just mixed.
-5. Drop tablespoon-sized clumps onto un-greased cookie sheets. Bake for 8-12 minutes, or until pale brown. Allow to cool on the pan for a minute or three, then transfer cookies to a wire rack to finish cooling.
+We welcome your questions, suggestions, and recommendations for improving this finding aid. If you have ideas for additional resources, notice areas that could be expanded, or simply want to connect with our team, please don't hesitate to reach out to us at [archive@aila.ngo](mailto:archive@aila.ngo). Your input helps us create a more comprehensive and useful resource for researchers, educators, and community members.

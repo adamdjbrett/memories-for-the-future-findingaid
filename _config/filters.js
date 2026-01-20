@@ -22,8 +22,7 @@ export default function(eleventyConfig) {
 	eleventyConfig.addFilter("filterTagList", function(tags) {
 		if(!Array.isArray(tags)) return [];
 		return tags.filter(tag => {
-			const excluded = ["all", "recipes", "pets", "portfolios", "homepages", "general",
-			"testting", "pages", "author", "authors"];
+			const excluded = ["all", "homepages", "general", "pages", "author", "authors"];
 			return typeof tag === 'string' && excluded.indexOf(tag) === -1;
 		});
 	});
