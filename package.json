@@ -4,9 +4,9 @@
   "description": "Innovation from Adam DJ Brett for ease in developing the libguide project",
   "type": "module",
   "scripts": {
-    "build": "eleventy",
+    "build": "eleventy && pagefind --site _site --glob \"**/*.html\"",
     "build-nocolor": "cross-env NODE_DISABLE_COLORS=1 eleventy",
-    "build-ghpages": "eleventy --pathprefix=/11ty-research-guide/",
+    "build-ghpages": "eleventy --pathprefix=/11ty-research-guide/ && pagefind --site _site --glob \"**/*.html\"",
     "start": "eleventy --serve --quiet",
     "start-ghpages": "eleventy --pathprefix=/11ty-research-guide/ --serve --quiet",
     "debug": "cross-env DEBUG=Eleventy* eleventy",
@@ -36,6 +36,7 @@
     "js-yaml": "^4.1.0",
     "luxon": "^3.5.0",
     "markdown-it-attrs": "^4.3.1",
+    "pagefind": "^1.4.0",
     "purgecss": "^6.0.0",
     "zod": "^3.23.8",
     "zod-validation-error": "^3.3.1"
@@ -43,6 +44,7 @@
   "dependencies": {
     "@11ty/eleventy-fetch": "^5.0.1",
     "@zachleat/heading-anchors": "^1.0.1",
+    "cheerio": "^1.2.0",
     "citation-js": "^0.7.16",
     "clean-css": "^5.3.3",
     "csv-parse": "^6.1.0",
@@ -54,6 +56,7 @@
     "markdown-it-container": "^4.0.0",
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-table-of-contents": "^0.8.0",
-    "node-fetch": "^3.3.2"
+    "node-fetch": "^3.3.2",
+    "undici": "^7.21.0"
   }
 }

@@ -6,7 +6,6 @@ import pluginRss from "@11ty/eleventy-plugin-rss";
 import pluginTOC from 'eleventy-plugin-toc';
 import yaml from "js-yaml";
 import CleanCSS from "clean-css";
-import { execSync } from 'child_process';
 import pluginFilters from "./_config/filters.js";
 import { DateTime } from "luxon";
 import csv from "csvtojson";
@@ -125,15 +124,6 @@ eleventyConfig.addCollection("subFolders", function(collectionApi) {
 			subtitle: "Sub title",
 			base: "https://example.com/",
 			author: { name: "Your Name" }
-		}
-	});
-
-	// 7. PAGEFIND INDEXING
-	eleventyConfig.on('eleventy.after', () => {
-		try {
-			execSync(`npx pagefind --site _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
-		} catch (error) {
-			console.log('[11ty] Pagefind indexing skipped');
 		}
 	});
 
