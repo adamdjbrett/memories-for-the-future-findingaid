@@ -7,7 +7,7 @@ excerpt: # full text of the the description. Each paragraph gets labeled as hype
   - text: 
 author: 
  - name: Yanapaq # person or org
-   image: /img/authors/maria.png # for orgs only. otpional for others
+   image: /img/logo.png # for orgs only. otpional for others
    url: "https://yanapaq.info/en/"
    email: # for orgs only
    about: # only one info needed

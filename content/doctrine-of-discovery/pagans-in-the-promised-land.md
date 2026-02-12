@@ -6,8 +6,8 @@ excerpt:
   - text: "Steven Newcomb explores the intersection of religious freedom and the Doctrine of Discovery, examining how religious justifications were used to colonize Indigenous lands."
 author: 
  - name: Steven Newcomb
-   image: /img/authors/maria.png
-   email: mail@mail.com
+   image: /img/author/newcomb.png
+   #email: mail@mail.com
    about: 
     - info: Author and legal scholar
    contact: 

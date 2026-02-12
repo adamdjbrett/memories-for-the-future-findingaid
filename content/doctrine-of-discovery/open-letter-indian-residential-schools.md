@@ -6,7 +6,7 @@ excerpt:
   - text: "Betty Lyons addresses the legacy of Indian Residential Schools and their connection to the Doctrine of Discovery in this open letter."
 author: 
  - name: Betty Lyons
-   image: /img/authors/maria.png
+   image: /img/authors/aila.png
    email: aila@aila.ngo
    about: 
     - info: Indigenous rights advocate and leader

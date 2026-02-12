@@ -6,8 +6,8 @@ excerpt: # full text of the the description. Each paragraph gets labeled as hype
   - text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   - text: Have you ever seen
 author: 
- - name: Maria Veronica # person or org
-   image: /img/authors/maria.png # for orgs only. otpional for others
+ - name: Demo # person or org
+   image: /img/logo.png # for orgs only. otpional for others
    email: mail@mail.com # for orgs only
    about: # only one info needed
     - info: Lorep ipsum dolor siamet amet jabang bayi lanang wedok.
@@ -18,4 +18,5 @@ author:
 tags: # we are using them for types at the moment more tags added later
  - Cat
  - black
+published: false
 ---

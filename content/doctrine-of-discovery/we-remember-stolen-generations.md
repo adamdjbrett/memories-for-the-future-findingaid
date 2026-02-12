@@ -6,8 +6,8 @@ excerpt:
   - text: "Betty Lyons reflects on the Stolen Generations and the ongoing impacts of colonial policies rooted in the Doctrine of Discovery."
 author: 
  - name: Betty Lyons
-   image: /img/authors/maria.png
-   email: mail@mail.com
+   image: /img/authors/aila.png
+   email: aila@aila.ngo
    about: 
     - info: Indigenous rights advocate and leader
    contact: 

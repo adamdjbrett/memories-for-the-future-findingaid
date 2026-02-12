@@ -3,7 +3,6 @@ import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
 import pluginRss from "@11ty/eleventy-plugin-rss";
-import pluginTOC from 'eleventy-plugin-toc';
 import yaml from "js-yaml";
 import CleanCSS from "clean-css";
 import pluginFilters from "./_config/filters.js";
@@ -13,6 +12,14 @@ import csv from "csvtojson";
 const TIME_ZONE = "America/New_York";
 
 export default async function(eleventyConfig) {
+// Polyfill File for environments where dependencies expect it (e.g. Node 18).
+if (typeof globalThis.File === "undefined") {
+	const { File } = await import("node:buffer");
+	globalThis.File = File;
+}
+
+const { default: pluginTOC } = await import("eleventy-plugin-toc");
+
 // 1. DATA EXTENSIONS (CSV & YAML)
 eleventyConfig.addDataExtension("csv", async (contents) => {
     return await csv({
