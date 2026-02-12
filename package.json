@@ -4,9 +4,9 @@
   "description": "Innovation from Adam DJ Brett for ease in developing the libguide project",
   "type": "module",
   "scripts": {
-    "build": "eleventy && pagefind --site _site --glob \"**/*.html\"",
+    "build": "rm -rf _site && eleventy && pagefind --site _site --glob \"**/*.html\"",
     "build-nocolor": "cross-env NODE_DISABLE_COLORS=1 eleventy",
-    "build-ghpages": "eleventy --pathprefix=/11ty-research-guide/ && pagefind --site _site --glob \"**/*.html\"",
+    "build-ghpages": "rm -rf _site && eleventy --pathprefix=/11ty-research-guide/ && pagefind --site _site --glob \"**/*.html\"",
     "start": "eleventy --serve --quiet",
     "start-ghpages": "eleventy --pathprefix=/11ty-research-guide/ --serve --quiet",
     "debug": "cross-env DEBUG=Eleventy* eleventy",
