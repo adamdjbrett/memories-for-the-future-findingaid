@@ -12,6 +12,15 @@ import csv from "csvtojson";
 const TIME_ZONE = "America/New_York";
 
 export default async function(eleventyConfig) {
+const isUnpublished = (value) => {
+	if (value === false) return true;
+	if (typeof value === "string") {
+		const normalized = value.trim().toLowerCase();
+		return normalized === "false" || normalized === "flase";
+	}
+	return false;
+};
+
 // Polyfill File for environments where dependencies expect it (e.g. Node 18).
 if (typeof globalThis.File === "undefined") {
 	const { File } = await import("node:buffer");
@@ -65,7 +74,10 @@ eleventyConfig.addFilter("filterByCollection", function(collection, targetTag) {
 
 	// 3. PREPROCESSORS
 	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
-		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+		if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+			return false;
+		}
+		if (isUnpublished(data.published)) {
 			return false;
 		}
 	});
