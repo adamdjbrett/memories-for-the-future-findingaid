@@ -39,7 +39,7 @@ header:
     url: /
     key: b
  default_breadcumb: Home Page
- sub_title: "A metafinding aid and gudie for Indigenous peoples' archives and resources related to the UNPFII."
+ sub_title: "A metafinding aid and guide for Indigenous peoples' archives and resources related to the UNPFII."
  info: "Find resources and archives related to Indigenous peoples and the United Nations Permanent Forum on Indigenous Issues (UNPFII). This metafinding aid provides access to a wide range of materials, including documents, statements, and reports from various Indigenous organizations and initiatives."
 
 # Home Sidebar Setup (always first, always shown)
