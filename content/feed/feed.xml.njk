@@ -1,0 +1,23 @@
+---
+permalink: /feed/feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>{{ site.title or metadata.title or 'Site Feed' }}</title>
+    <link>{{ (site.url or metadata.url or '') }}/</link>
+    <description>{{ site.description or metadata.description or '' }}</description>
+    {%- set base = (site.url or metadata.url or '') -%}
+    {%- set feedItems = collections.posts or collections.post or collections.blog or collections.newsEntries or collections.all or [] -%}
+    {%- for post in feedItems %}
+      {%- if post.url and post.data.eleventyExcludeFromCollections !== true and post.url != '/feed/feed.xml' and post.url != '/sitemap.xml' and post.url != '/robots.txt' and post.url != '/humans.txt' %}
+      <item>
+        <title>{{ post.data.title or post.fileSlug or post.url }}</title>
+        <link>{{ base }}{{ post.url }}</link>
+        <guid>{{ base }}{{ post.url }}</guid>
+      </item>
+      {%- endif %}
+    {%- endfor %}
+  </channel>
+</rss>
