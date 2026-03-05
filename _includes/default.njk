@@ -1,12 +1,24 @@
 ---
 layout: base.njk
 ---
-<main data-pagefind-body data-pagefind-weight="10">
+{% set isTagPage = page.url and page.url.startsWith('/tags/') %}
+{% set sourceFile = 'index.md' %}
+{% if page.inputPath %}
+{% set inputParts = page.inputPath.split('/') %}
+{% set sourceFile = inputParts[inputParts.length - 1] %}
+{% elif page.fileSlug and page.fileSlug != '' %}
+{% set sourceFile = page.fileSlug ~ '.md' %}
+{% endif %}
+{% if sourceFile == '.md' %}
+{% set sourceFile = 'index.md' %}
+{% endif %}
+<main data-pagefind-body data-pagefind-weight="{{ '1' if isTagPage else '10' }}">
 <div style="display:none" aria-hidden="true">
-<span data-pagefind-meta="content_type">page</span>
-<span data-pagefind-meta="search_priority">1</span>
-<span data-pagefind-meta="source_file">{{ page.fileSlug }}.md</span>
-<span data-pagefind-meta="title">{{ title or page.fileSlug }} — {{ page.fileSlug }}.md</span>
+<span data-pagefind-meta="content_type">{{ 'tag' if isTagPage else 'page' }}</span>
+<span data-pagefind-meta="search_priority">{{ '3' if isTagPage else '1' }}</span>
+<span data-pagefind-sort="search_priority">{{ '3' if isTagPage else '1' }}</span>
+<span data-pagefind-meta="source_file">{{ sourceFile }}</span>
+<span data-pagefind-meta="title">{{ title or page.fileSlug or 'Home' }} — {{ sourceFile }}</span>
 </div>
 {{ content | safe }}
 </main>
