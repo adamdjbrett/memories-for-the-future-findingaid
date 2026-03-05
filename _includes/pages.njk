@@ -1,7 +1,15 @@
 ---
 layout: base.njk
 ---
-<main class="print">
+{% set isTagPage = page.url and page.url.startsWith('/tags/') %}
+<main class="print" data-pagefind-body data-pagefind-weight="{{ '2' if isTagPage else '10' }}">
+<div style="display:none" aria-hidden="true">
+<span data-pagefind-meta="content_type">{{ 'tag' if isTagPage else 'page' }}</span>
+<span data-pagefind-meta="search_priority">{{ '3' if isTagPage else '1' }}</span>
+<span data-pagefind-sort="search_priority">{{ '3' if isTagPage else '1' }}</span>
+<span data-pagefind-meta="source_file">{{ page.fileSlug }}.md</span>
+<span data-pagefind-meta="title">{{ title }} — {{ page.fileSlug }}.md</span>
+</div>
 {% include "partials/header.njk" %}
 <div class="container ">
 <div class="row mts-5">
