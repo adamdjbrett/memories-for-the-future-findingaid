@@ -11,7 +11,9 @@
     "start-ghpages": "eleventy --pathprefix=/11ty-research-guide/ --serve --quiet",
     "debug": "cross-env DEBUG=Eleventy* eleventy",
     "debugstart": "cross-env DEBUG=Eleventy* eleventy --serve --quiet",
-    "benchmark": "cross-env DEBUG=Eleventy:Benchmark* eleventy"
+    "benchmark": "cross-env DEBUG=Eleventy:Benchmark* eleventy",
+    "deploy": "npm run build && wrangler deploy",
+    "preview": "npm run build && wrangler dev"
   },
   "repository": {
     "type": "git",
@@ -38,6 +40,7 @@
     "markdown-it-attrs": "^4.3.1",
     "pagefind": "^1.4.0",
     "purgecss": "^6.0.0",
+    "wrangler": "^4.85.0",
     "zod": "^3.23.8",
     "zod-validation-error": "^3.3.1"
   },
