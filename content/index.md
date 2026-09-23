@@ -1,7 +1,7 @@
 ---
 layout: "home.njk"
-title: Home Page
-description: this is descriptions
+title: Memories for the Future Finding Aid
+description: "A metafinding aid and guide for Indigenous peoples' archives and resources related to the UNPFII."
 breadcumb: Home Page
 date: Last Modified
 tags: 

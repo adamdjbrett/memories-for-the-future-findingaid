@@ -10,15 +10,24 @@
 <meta content="{{description or metadata.description}}" property="og:description">
 <meta content="{{description or metadata.description}}" name="twitter:description">
 <meta property="twitter:card" content="summary_large_image">
-<meta content="{{image or metadata.metasocial.image}}" name="twitter:image">
-<meta content="{{image or metadata.metasocial.image}}" name="facebook:image">
-<meta content="{{image or metadata.metasocial.image}}" name="og:image">
+<meta content="{{image or metadata.image}}" name="twitter:image">
+<meta content="{{image or metadata.image}}" name="facebook:image">
+<meta content="{{image or metadata.image}}" name="og:image">
 <link href="{{metadata.favicon}}" rel="icon" type="image/x-icon">
 <meta content="{{metadata.metasocial.facebook}}" property="facebook:author">
 <meta content="{{metadata.metasocial.twitteruser}}" property="twitter:author">
 <meta content="{{metadata.metasocial.twitter}}" name="twitter:site">
 <meta property="og:type" content="website">
 <link rel="canonical" href="{{metadata.url}}{{page.url}}">
+<!-- Zotero / Highwire / PRISM -->
+<meta property="zotero:itemType" content="webPage">
+<meta name="prism.publicationName" content="{{ metadata.title }}">
+<meta name="dc.title" content="{{ (title or metadata.title) | escape }}">
+{% for a in author %}<meta name="citation_author" content="{{ a.name | escape }}">
+{% else %}<meta name="citation_author" content="{{ metadata.author.name }}">
+{% endfor %}{% if page.date %}<meta name="citation_publication_date" content="{{ page.date | htmlDateString }}">
+{% endif %}<meta name="citation_public_url" content="{{metadata.url}}{{page.url}}">
+<meta name="citation_language" content="{{metadata.language}}">
 <link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 <meta name="language" content="{{metadata.language}}">
 <meta name="locale" content="{{metadata.locale}}">
